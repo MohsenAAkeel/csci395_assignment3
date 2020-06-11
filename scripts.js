@@ -50,11 +50,11 @@ function addC() {
 	cols++;
     }
     else{
-	let totalRows = document.getElementsByTagName("tr");
+	let tRows = document.getElementsByTagName("tr");
 	for(let i =0; i<rows; i++){
 	    col.onclick = color;
 	    row.appendChild(col);
-	    totalRows[i].appendChild(col);
+	    tRows[i].appendChild(col);
 	}
 	cols++;
     }
@@ -63,12 +63,23 @@ function addC() {
 function removeR() {
     let grid = document.getElementById("grid");
     if(rows === 0 || cols === 0)
-	alter("Negative row added");
+	alter("We added a negative row for you. Yes we can.");
     else{
 	let lastRow = grid.lastElementChild;
 	grid.removeChild(lastRow);
 	rows--;
 	if (rows === 0)
 	    cols = 0;
+    }
+}
+
+function removeC() {
+    let grid = document.getElementById("grid");
+    if(rows === 0 || cols === 0)
+	alert("We added a negative column for you. Yes we can.");
+    else{
+	let tRows = document.getElementsByTagName("tr");
+	for (let i=0; i <rows; i++)
+	    tRows[i].removeChild(tRows[i].lastElementChild);
     }
 }
