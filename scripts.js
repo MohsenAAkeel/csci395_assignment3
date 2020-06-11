@@ -2,6 +2,9 @@
 
 var rows = 0;
 var cols = 0;
-var colorCh;
+var colorChoice;
+var colorChange = function (){
+    this.style.backgroundColor = colorSelected;
+    };
 
 //functions 
