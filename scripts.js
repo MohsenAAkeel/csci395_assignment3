@@ -11,8 +11,8 @@ var colorChange = function (){
 
 function addR() {
     let grid = document.getElementById("grid");
-    let row = document.createElement('tr');
-    let col = document.createElement('td');
+    let row = document.createElement("tr");
+    let col = document.createElement("td");
     
     if(rows === 0){
 	col.onclick = color;
