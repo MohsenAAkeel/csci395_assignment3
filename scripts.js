@@ -63,7 +63,7 @@ function addC() {
 function removeR() {
     let grid = document.getElementById("grid");
     if(rows === 0 || cols === 0)
-	alter("We added a negative row for you. Yes we can.");
+	alert("We added a negative row for you. Yes we can.");
     else{
 	let lastRow = grid.lastElementChild;
 	grid.removeChild(lastRow);
