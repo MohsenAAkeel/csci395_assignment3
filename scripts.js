@@ -59,3 +59,16 @@ function addC() {
 	cols++;
     }
 }
+
+function removeR() {
+    let grid = document.getElementById("grid");
+    if(rows === 0 || cols === 0)
+	alter("Negative row added");
+    else{
+	let lastRow = grid.lastElementChild;
+	grid.removeChild(lastRow);
+	rows--;
+	if (rows === 0)
+	    cols = 0;
+    }
+}
